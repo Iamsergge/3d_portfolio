@@ -10,7 +10,8 @@ import {
     html,
     javascript,
     linkedin,
-    mongodb,
+    Firebase,
+    AWS,
     nodejs,
     react,
     redux,
@@ -55,8 +56,13 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: mongodb,
-        name: "mongodb",
+        imageUrl: Firebase,
+        name: "firebase",
+        type: "Database",
+    },
+    {
+        imageUrl: AWS,
+        name: "AWS",
         type: "Database",
     },
    

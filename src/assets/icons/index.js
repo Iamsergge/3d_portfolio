@@ -5,6 +5,7 @@ import github from './github.svg'
 import html from './html.svg'
 import javascript from './javascript.svg'
 import mongodb from './mongodb.svg'
+import Firebase from './Firebase.svg'
 import motion from './motion.svg'
 import mui from './mui.svg'
 import nextjs from './nextjs.svg'
@@ -14,6 +15,7 @@ import redux from './redux.svg'
 import sass from './sass.svg'
 import tailwindcss from './tailwindcss.svg'
 import typescript from './typescript.svg'
+import AWS from './AWS.svg'
 import linkedin from './linkedin.svg'
 import twitter from './twitter.svg'
 import car from './car.svg'
@@ -35,6 +37,7 @@ export {
     html,
     javascript,
     mongodb,
+    Firebase,
     motion,
     mui,
     nextjs,
@@ -44,6 +47,7 @@ export {
     sass,
     tailwindcss,
     typescript,
+    AWS,
     linkedin,
     twitter,
     car,
