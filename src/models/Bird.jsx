@@ -17,7 +17,7 @@ const Bird = () => {
     if (!birdRef.current) return;
 
     // Log the bird's current animation state
-    console.log('Bird animation state:', actions['take 001']?.isRunning());
+    console.log('Bird animation state:', actions['Take 001']?.isRunning());
     // Update the Y position to simulate bird-like motion using a sin wave
     birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
    

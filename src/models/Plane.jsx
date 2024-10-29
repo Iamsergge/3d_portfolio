@@ -7,11 +7,13 @@ import * as THREE from 'three';
 const Plane = ({ isRotating, ...props }) => {
   const ref = useRef();
   const bladeRef = useRef();
+  
+  // Load the GLTF model
   const { scene, animations } = useGLTF(planeScene);
   const { actions } = useAnimations(animations, ref);
 
   useEffect(() => {
-    if (actions['Take 001']) {
+    if (actions && actions['Take 001']) {
       if (isRotating) {
         actions['Take 001'].reset().play();
         actions['Take 001'].setLoop(THREE.LoopRepeat);
@@ -19,7 +21,7 @@ const Plane = ({ isRotating, ...props }) => {
         actions['Take 001'].stop();
       }
     } else {
-      console.error('Animation "Take 001" not found.');
+      console.warn('Animation "Take 001" not found.');
     }
   }, [actions, isRotating]);
 
@@ -30,7 +32,7 @@ const Plane = ({ isRotating, ...props }) => {
   });
 
   useEffect(() => {
-    // Assuming your blade object is named "Blade" in the GLTF model
+    // Check if the object is available in the GLTF model
     const blade = scene.getObjectByName('Blade');
     if (blade) {
       bladeRef.current = blade;
